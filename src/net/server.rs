@@ -64,6 +64,7 @@ impl Server {
                         GameState::Tie => {
                             send(&mut player_a, ServerMessage::YouTied);
                             send(&mut player_b, ServerMessage::YouTied);
+                            break;
                         }
                         GameState::Won(winner) => {
                             match winner {
